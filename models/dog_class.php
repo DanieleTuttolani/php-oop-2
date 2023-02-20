@@ -1,5 +1,5 @@
 <?php 
-include_once __DIR__ . '/../index.php';
+include_once __DIR__ . '/products.php';
 // classe per prodotti per cani
 class DogProduct extends Products{
     public $type;

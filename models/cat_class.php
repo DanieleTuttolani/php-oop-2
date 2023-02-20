@@ -1,5 +1,5 @@
 <?php
-include_once __DIR__ . '/../index.php';
+include_once __DIR__ . '/products.php';
 //classe per prodotti per gatti
 class CatProduct extends Products{
     public $type;

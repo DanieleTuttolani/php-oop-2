@@ -1,17 +1,7 @@
 <?php
-include_once __DIR__ . '/partials/dog_class.php';
-include_once __DIR__ . '/partials/cat_class.php';
-class Products{
-    public $name;
-    public $price;
-    public $quantity;
-
-    public function __construct($name , $price , $quantity){
-        $this->name = $name;
-        $this->price = $price;
-        $this->quantity = $quantity;
-    }
-}
+include_once __DIR__ . '/models/products.php';
+include_once __DIR__ . '/models/dog_class.php';
+include_once __DIR__ . '/models/cat_class.php';
 ?>
 
 <!DOCTYPE html>
