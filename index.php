@@ -1,4 +1,6 @@
 <?php
+include_once __DIR__ . '/partials/dog_class.php';
+include_once __DIR__ . '/partials/cat_class.php';
 class Products{
     public $name;
     public $price;
@@ -10,45 +12,6 @@ class Products{
         $this->quantity = $quantity;
     }
 }
-//classe per prodotti per cani
-class DogProduct extends Products{
-    public $type;
-    public $product_pic;
-
-    public function __construct($name , $price , $quantity , $product_pic = '#' , $type = 'Cane'){
-        $this->type = $type;
-        $this->product_pic = $product_pic;
-        parent::__construct($name , $price , $quantity);
-    }
-}
-//istanze per prodotti per cani
-$cuccia_cane = new DogProduct('LA Cuccia', 30 , 10, 'https://m.media-amazon.com/images/I/81BGCfKSPHL._AC_SX425_.jpg');
-$mangime_cane = new DogProduct('Mangime premium', 5  , 120, 'https://www.foodpet.it/wp-content/uploads/2022/02/iberian_pork_2160x.jpg');
-$pettorina_cane = new DogProduct('Pettorina personalizata con nome', 55 , 12, 'https://m.media-amazon.com/images/I/71dqNoHmIdL._AC_SY355_.jpg');
-
-//ragruppo i prodotti in maniera manuale
-$dog_products_list = [$cuccia_cane , $mangime_cane , $pettorina_cane];
-
-//classe per prodotti per gatti
-class CatProduct extends Products{
-    public $type;
-    public $product_pic;
-
-    public function __construct($name , $price , $quantity , $product_pic = '#' , $type = 'Gatto'){
-        $this->type = $type;
-        $this->product_pic = $product_pic;
-        parent::__construct($name , $price , $quantity);
-    }
-}
-
-//istanze prodotti per gatti
-$lettiera = new Catproduct('Lettiera per gatti : La terra di nessuno', 25 , 5 , 'https://media-assets.wired.it/photos/615c5674be48be4873e7e6e2/master/w_1200,h_710,c_limit/f0f58d56-74c0-46b8-a14a-6f7c26cbf28a.jpg');
-$copertura = new Catproduct('Copertura per porte anti graffio ', 42 , 33, 'https://newfastuff.com/wp-content/uploads/2019/11/o6e5j7b2e4041.png');
-$laser = new Catproduct('Puntatore laser', 25 , 5 , 'https://external-preview.redd.it/Ge8HTMKhIvj1LdaulvSVYDO-uCOqmm8e7lMCiQVB2ZA.jpg?width=640&crop=smart&auto=webp&s=880ab741411436bc11d3a496d95b44d99e99394f');
-
-
-//ragruppo tutti i prodotti 
-$cat_products_list = [$lettiera , $copertura , $laser];
 ?>
 
 <!DOCTYPE html>
